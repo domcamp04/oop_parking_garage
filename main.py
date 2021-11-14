@@ -1,7 +1,7 @@
 class ParkingGarage:
+    open_spots = 25
     parked_cars = []
     current_ticket = []
-    open_spots = 25
     
     def __init__(self, open_spots, parked_cars, unpaid_ticekts):
         self.open_spots = open_spots
@@ -44,9 +44,7 @@ class ParkingGarage:
 
     
 def run():
-    
     park = ParkingGarage
-    
     while True:
         action = input("Please enter one of the following options: \n Enter 'take' to enter the garage \n Enter 'pay' to pay ticket \n Enter 'leave' to exit the garage ").lower()
         if action == "take":
@@ -57,6 +55,5 @@ def run():
             park.leaveGarage(park)
         else:
             print("Invalid entry.")
-
         
 run()
